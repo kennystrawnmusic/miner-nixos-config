@@ -37,7 +37,13 @@
         pytest-mock
         pytest-voluptuous
         pytestCheckHook
-        snapshottest
+        (snapshottest.overrideAttrs(_: rec {
+          propagatedBuildInputs = with python311Packages; [
+            fastdiff
+            six
+            termcolor
+          ];
+        }))
         wasmer
         vcrpy
       ]);
