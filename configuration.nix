@@ -38,8 +38,8 @@ in
         ];
       });
 
-      # Force Python to remain on 3.11 until the failures of 3.12 to install are ironed out
       final.python3 = prev.python311;
+      final.python312Packages.wasmer = prev.pyton311Packages.wasmer;
     })
   ];
 
