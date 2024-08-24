@@ -38,6 +38,7 @@
         pytest-voluptuous
         pytestCheckHook
         snapshottest
+        wasmer
         vcrpy
       ]);
     }))
@@ -46,7 +47,6 @@
     pacu
     poutine
     prowler
-    python311Packages.wasmer
     yatas
   ];
 }
