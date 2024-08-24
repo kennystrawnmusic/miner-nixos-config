@@ -46,6 +46,41 @@ in
 
     # Needed for ensuring desktop layout reproducibility
     (import "${home-manager}/nixos")
+
+    # Pentest tools
+    ./bluetooth.nix
+    ./cloud.nix
+    ./code.nix
+    ./container.nix
+    ./dns.nix
+    ./exploits.nix
+    ./forensics.nix
+    ./fuzzers.nix
+    ./generic.nix
+    ./hardware.nix
+    ./host.nix
+    ./information-gathering.nix
+    ./kubernetes.nix
+    ./ldap.nix
+    ./load-testing.nix
+    ./malware.nix
+    ./misc.nix
+    ./mobile.nix
+    ./network.nix
+    ./packet-generators.nix
+    ./password.nix
+    ./port-scanners.nix
+    ./proxies.nix
+    ./services.nix
+    ./smartcards.nix
+    ./terminals.nix
+    ./tls.nix
+    ./traffic.nix
+    ./tunneling.nix
+    ./voip.nix
+    ./web.nix
+    ./windows.nix
+    ./wireless.nix
   ];
 
   # Nix package manager settings
@@ -379,70 +414,7 @@ in
     # Reproducibility
     nixos-install-tools
 
-    # Needed for CEH Class, Part 1: General
-    bat
-    ranger
-    discord-canary
-
-    # Needed for CEH Class, Part 2: Exploitation
-    metasploit
-    yersinia
-
-    # Needed for CEH Class, Part 3: Forensics
-    capstone
-    ddrescue
-    ext4magic
-    extundelete
-    ghidra-bin
-    git
-    p0f
-    pdf-parser
-    sleuthkit
-
-    # Needed for CEH Class, Part 4: Hardware
-    apktool
-
-    # Needed for CEH Class, Part 5: Reconnaisance
-    cloudbrute
-    dnsenum
-    adreaper
-    openldap
-    ldeep
-    linux-exploit-suggester
-    dnsrecon
-    enum4linux
-    hping
-    masscan
-    netcat
-
-    # NixOS/nixpkgs#287288
-    (nmap.overrideAttrs(old: rec {
-      nativeBuildInputs = old.nativeBuildInputs ++ [
-        gobject-introspection
-        (python311.withPackages(pypkgs: [
-          pypkgs.pygobject3
-        ]))
-        wrapGAppsHook
-      ];
-
-      buildInputs = old.buildInputs ++ [ gtk3 ];
-
-      configureFlags = lib.remove "--without-zenmap" (lib.flatten old.configureFlags);
-
-      installPhase = ''
-        cd zenmap
-        python setup.py install --prefix=$out
-        sed -i "58a sys.path.append(\"$out/lib/python${python3.sourceVersion.major}.${python3.sourceVersion.minor}/site-packages/\")" $out/bin/zenmap
-      '';
-    }))
-    ntopng
-    sn0int
-    sslsplit
-    theharvester
-    wireshark
-    smbmap
-
-    # Needed for CEH Class, Part 6: Runtime Dependencies Of Python Hacking Tools
+    # Runtime Dependencies of Python Pentest Tools
     gtk3
     (python311.withPackages(pypkgs: [
       pypkgs.binwalk
@@ -452,68 +424,6 @@ in
       pypkgs.pygobject3
       pypkgs.scapy
     ]))
-
-    # Needed for CEH Class, Part 7: Backdoors
-    httptunnel
-    pwnat
-
-    # Needed for CEH Class, Part 8: Password Cracking
-    brutespray
-    cewl
-    chntpw
-    crowbar
-    crunch
-    hashcat
-    hash-identifier
-    hcxtools
-    john
-    phrasendrescher
-    thc-hydra
-
-    # Needed for CEH Class, Part 9: Disassemblers
-    binutils
-    elfutils
-    jd-gui
-    patchelf
-    radare2
-    radare2-cutter
-    retdec
-    snowman
-    valgrind
-    yara
-
-    # Needed for CEH Class, Part 10: Packet Sniffers
-    bettercap
-    dsniff
-    mitmproxy
-    rshijack
-    sipp
-    sniffglue
-    sslstrip
-
-    # Needed for CEH Class, Part 11: Vulnerability Analyzers
-    grype
-    lynis
-    sqlmap
-    vulnix
-    whatweb
-
-    # Needed for CEH Class, Part 12: Spiders
-    dirb
-    gobuster
-    urlhunter
-    python311Packages.wfuzz
-    zap
-    
-    # Pentesting, Part 13: Wi-Fi
-    aircrack-ng
-    bully
-    cowpatty
-    kalibrate-hackrf
-    killerbee
-    multimon-ng
-    redfang
-    wifite2
 
     # Custom packages, Part 1: PwnXSS
     (pkgs.stdenv.mkDerivation rec {
