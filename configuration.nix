@@ -37,6 +37,8 @@ in
           "ftp://ftp.funet.fi/pub/mirrors/ftp.gnu.org/gnu/"
         ];
       });
+
+      # Force use of Python 3.11 to work around the problem of not having enough support for 3.12 among the pentest tools
       python3 = prev.python311;
     })
   ];
