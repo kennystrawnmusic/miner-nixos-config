@@ -16,12 +16,7 @@
     pixiewps
     reaverwps
     wavemon
-    (wifite2.overrideAttrs(_: rec {
-      pythonDependencies = [
-        python311Packages.chardet
-        python311Packages.scapy
-      ];
-    }))
+    python312Packages.wifite2
     zigpy-cli
   ];
 }
