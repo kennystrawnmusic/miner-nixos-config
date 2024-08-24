@@ -448,7 +448,7 @@ in
       buildInputs = propagatedBuildInputs;
       nativeBuildInputs = propagatedBuildInputs;
 
-      pythonPath = with python3Packages; [ beautifulsoup4 requests ];
+      pythonPath = with python311Packages; [ beautifulsoup4 requests ];
 
       pwnxssExecutable = placeholder "out" + "/bin/pwnxss";
 

@@ -15,7 +15,7 @@
     kepler
     nmap-formatter
     pwntools
-    python3Packages.pytenable
+    python311Packages.pytenable
     snscrape
     sr2t
     sttr

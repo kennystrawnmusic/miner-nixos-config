@@ -20,7 +20,7 @@
     ncrack
     nth
     phrasendrescher
-    python3Packages.patator
+    python311Packages.patator
     thc-hydra
     truecrack
   ];

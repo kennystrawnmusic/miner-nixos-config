@@ -14,11 +14,11 @@
     nrfutil
     teensy-loader-cli
     tytools
-    python3Packages.angr
-    python3Packages.angrop
-    python3Packages.can
-    python3Packages.pyi2cflash
-    python3Packages.pyspiflash
+    python311Packages.angr
+    python311Packages.angrop
+    python311Packages.can
+    python311Packages.pyi2cflash
+    python311Packages.pyspiflash
     routersploit
   ];
 }

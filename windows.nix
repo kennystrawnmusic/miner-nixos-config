@@ -28,8 +28,8 @@
     nbtscanner
     offensive-azure
     pre2k
-    python3Packages.lsassy
-    python3Packages.pypykatz
+    python311Packages.lsassy
+    python311Packages.pypykatz
     rdwatool
     samba
     smbmap

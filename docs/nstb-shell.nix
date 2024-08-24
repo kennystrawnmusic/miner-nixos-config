@@ -379,23 +379,23 @@ mkShell {
     pwntools
     pysqlrecon
     python310Packages.safety
-    python3Packages.angr
-    python3Packages.angrop
-    python3Packages.binwalk
-    python3Packages.bleak
-    python3Packages.can
-    python3Packages.emv
-    python3Packages.karton-core
-    python3Packages.lsassy
-    python3Packages.malduck
-    python3Packages.patator
-    python3Packages.pyi2cflash
-    python3Packages.pypykatz
-    python3Packages.pyspiflash
-    python3Packages.pytenable
-    python3Packages.r2pipe
-    python3Packages.scapy
-    python3Packages.unicorn
+    python311Packages.angr
+    python311Packages.angrop
+    python311Packages.binwalk
+    python311Packages.bleak
+    python311Packages.can
+    python311Packages.emv
+    python311Packages.karton-core
+    python311Packages.lsassy
+    python311Packages.malduck
+    python311Packages.patator
+    python311Packages.pyi2cflash
+    python311Packages.pypykatz
+    python311Packages.pyspiflash
+    python311Packages.pytenable
+    python311Packages.r2pipe
+    python311Packages.scapy
+    python311Packages.unicorn
     python3packages.hakuin
     radamsa
     radare2
