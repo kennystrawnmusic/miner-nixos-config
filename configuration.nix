@@ -37,6 +37,9 @@ in
           "ftp://ftp.funet.fi/pub/mirrors/ftp.gnu.org/gnu/"
         ];
       });
+
+      # Force Python to remain on 3.11 until the failures of 3.12 to install are ironed out
+      final.python3 = prev.python311;
     })
   ];
 
