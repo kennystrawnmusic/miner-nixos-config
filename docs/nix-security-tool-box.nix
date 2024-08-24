@@ -285,7 +285,11 @@
     lynis
     lynx
     macchanger
-    maigret
+
+    # Must use Python 3.11 for this to build properly
+    (maigret.overrideAttrs(_: rec {
+      python3 = python311;
+    }))
     mantra
     masscan
     massdns
