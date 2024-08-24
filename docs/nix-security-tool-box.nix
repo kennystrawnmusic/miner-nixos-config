@@ -396,7 +396,7 @@
     python311Packages.r2pipe
     python311Packages.scapy
     python311Packages.unicorn
-    python3packages.hakuin
+    python311Packages.hakuin
     radamsa
     radare2
     radare2-cutter
