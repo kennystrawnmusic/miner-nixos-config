@@ -40,9 +40,9 @@
         (snapshottest.overrideAttrs(_: rec {
           propagatedBuildInputs = with python311Packages; [
             (fastdiff.overrideAttrs(_: rec {
-              propagatedBuildInputs = with python311Packages; [
-                python3.11-wasmer
-                wasmer-compiler-cranelift
+              propagatedBuildInputs = [
+                python311Packages.wasmer
+                python311Packages.wasmer-compiler-cranelift
               ];
             }))
             six
