@@ -29,7 +29,7 @@
     graphqlmap
     graphw00f
     hakrawler
-    python311packages.hakuin
+    python311Packages.hakuin
     hey
     httpx
     nodePackages.hyperpotamus
