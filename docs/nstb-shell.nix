@@ -528,7 +528,7 @@ mkShell {
     tfsec
     thc-hydra
     theharvester
-    tightvnc
+    #tightvnc
     tlsx
     tmux
     tracee
