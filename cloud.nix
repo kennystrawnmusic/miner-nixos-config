@@ -39,7 +39,12 @@
         pytestCheckHook
         (snapshottest.overrideAttrs(_: rec {
           propagatedBuildInputs = with python311Packages; [
-            fastdiff
+            (fastdiff.overrideAttrs(_: rec {
+              propagatedBuildInputs = with python311Packages; [
+                wasmer
+                wasmer-compiler-cranelift
+              ];
+            }))
             six
             termcolor
           ];
