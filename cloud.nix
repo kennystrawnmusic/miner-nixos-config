@@ -46,6 +46,7 @@
     pacu
     poutine
     prowler
+    python311Packages.wasmer
     yatas
   ];
 }

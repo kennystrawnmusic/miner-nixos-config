@@ -37,9 +37,6 @@ in
           "ftp://ftp.funet.fi/pub/mirrors/ftp.gnu.org/gnu/"
         ];
       });
-
-      final.python3 = prev.python311;
-      final.python312Packages.wasmer = prev.pyton311Packages.wasmer;
     })
   ];
 
@@ -426,6 +423,7 @@ in
       pypkgs.beautifulsoup4
       pypkgs.pygobject3
       pypkgs.scapy
+      pypkgs.wasmer
     ]))
 
     # Custom packages, Part 1: PwnXSS
