@@ -41,7 +41,7 @@
           propagatedBuildInputs = with python311Packages; [
             (fastdiff.overrideAttrs(_: rec {
               propagatedBuildInputs = with python311Packages; [
-                python311-wasmer
+                python3.11-wasmer
                 wasmer-compiler-cranelift
               ];
             }))
