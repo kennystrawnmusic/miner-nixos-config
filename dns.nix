@@ -21,7 +21,7 @@
     knockpy
     massdns
     subfinder
-    subprober
+#     subprober
     subzerod
     wtfis
   ];
