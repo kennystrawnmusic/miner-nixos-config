@@ -16,7 +16,14 @@
     pixiewps
     reaverwps
     wavemon
-    python312Packages.wifite2
+    (wifite2.overrideAttrs(_: rec {
+      pythonDependencies = [
+        python311Packages.chardet
+        python311Packages.scapy
+      ];
+
+      nativeCheckInputs = propagatedBuildInputs ++ [ python311Packages.unittestCheckHook ];
+    }))
     zigpy-cli
   ];
 }
