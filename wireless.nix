@@ -17,9 +17,11 @@
     reaverwps
     wavemon
     (wifite2.overrideAttrs(_: rec {
-      pythonDependencies = [
-        python311Packages.chardet
-        python311Packages.scapy
+      pythonDependencies = with python311Packages; [
+        (chardet.overrideAttrs(_: rec {
+          nativeBuildInputs = [ python311Packages.setuptools ];
+        }))
+        scapy
       ];
 
       nativeCheckInputs = propagatedBuildInputs ++ [ python311Packages.unittestCheckHook ];
